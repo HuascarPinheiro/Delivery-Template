@@ -12,6 +12,8 @@ export const Card = styled.div`
 export const Image = styled.img`
   max-width: 100%;
   width: 100%;
+  height: 216px;
+  object-fit: cover;
 `
 
 export const Categories = styled.ul`
@@ -19,6 +21,20 @@ export const Categories = styled.ul`
   display: flex;
   right: 0;
   margin: 16px;
+  text-transform: capitalize;
+
+  li {
+    background-color: ${colors.primaria};
+    color: ${colors.secundaria};
+    margin-left: 8px;
+    padding: 6px 4px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .destaqueOff {
+    display: none;
+  }
 `
 
 export const Category = styled.li`

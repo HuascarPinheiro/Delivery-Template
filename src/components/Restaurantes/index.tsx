@@ -1,32 +1,34 @@
-import { useSelector } from 'react-redux'
-import { RootReducer } from '../../store'
+import { useGetRestaurantsQuery } from '../../services/api'
 
 import Container from '../../styles/containers'
-import RestaurantItem from '../../containers/Restaurantes'
-import { RestList, RestSection } from './styles'
+import RestaurantItem from '../../containers/RestaurantesItems'
+import { RestauranteList, RestauranteSection } from './styles'
+import { Loading } from '../../styles/loading'
 
 const Restaurants = () => {
-  const itens = useSelector((state: RootReducer) => state.restaurants.itens)
+  const { data: restaurants, isLoading } = useGetRestaurantsQuery()
+
+  if (isLoading) return <Loading>Carregando...</Loading>
 
   return (
-    <RestSection>
+    <RestauranteSection>
       <Container>
-        <RestList>
-          {itens.map((r) => (
+        <RestauranteList>
+          {restaurants?.map((r) => (
             <RestaurantItem
               key={r.id}
-              title={r.title}
-              category={r.category}
-              description={r.description}
-              image={r.image}
-              rating={r.rating}
+              title={r.titulo}
+              category={r.tipo}
+              description={r.descricao}
+              image={r.capa}
+              rating={r.avaliacao}
               id={r.id}
-              products={r.products}
+              destacado={r.destacado}
             />
           ))}
-        </RestList>
+        </RestauranteList>
       </Container>
-    </RestSection>
+    </RestauranteSection>
   )
 }
 

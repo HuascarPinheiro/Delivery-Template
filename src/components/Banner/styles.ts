@@ -26,6 +26,7 @@ export const RestaurantCategoria = styled.h2`
   margin-top: 32px;
   font-size: 32px;
   font-weight: 100;
+  text-transform: capitalize;
 `
 
 export const RestaurantTitulo = styled.h1`
@@ -34,4 +35,5 @@ export const RestaurantTitulo = styled.h1`
   font-weight: bold;
   font-size: 32px;
   margin-bottom: 32px;
+  text-transform: capitalize;
 `

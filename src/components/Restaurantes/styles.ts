@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import colors from '../../styles/colors'
 
-export const RestSection = styled.section`
+export const RestauranteSection = styled.section`
   background-color: ${colors.background};
 `
 
-export const RestList = styled.ul`
+export const RestauranteList = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 6%;
