@@ -21,4 +21,5 @@ export const AdicionarProduto = styled.button`
   color: ${colors.primaria};
   background-color: ${colors.secundaria};
   font-size: 14px;
+  cursor: pointer;
 `

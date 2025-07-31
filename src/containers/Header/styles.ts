@@ -15,10 +15,10 @@ export const HeaderContainer = styled.div`
   padding: 40px 0;
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-weight: bold;
+  justify-content: center;
   font-size: 18px;
+  font-weight: bold;
 
   @media (max-width: 625px) {
     display: block;
@@ -41,17 +41,19 @@ export const Left = styled(Link)`
     margin-bottom: 5px;
   }
 `
-export const Right = styled(Link)`
+export const Right = styled.button`
   position: absolute;
   color: ${colors.primaria};
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
   right: 0;
 
-  &:hover {
-    color: ${colors.btnpointer};
-  }
-
-  @media (max-width: 625px) {
-    position: static;
+  @media (max-width: 798px) {
     display: block;
+    position: static;
+    margin: 0 auto;
   }
 `
