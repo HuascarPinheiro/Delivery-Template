@@ -2,7 +2,10 @@ import styled from 'styled-components'
 import colors from '../../styles/colors'
 
 export const ProdutoImagem = styled.img`
-  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 164px;
+  width: 100%;
 `
 
 export const ProdutoTitulo = styled.h3`

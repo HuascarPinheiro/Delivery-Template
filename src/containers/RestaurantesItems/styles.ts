@@ -78,8 +78,8 @@ export const SaibaMais = styled(Link)`
   font-size: 1em;
   font-weight: bold;
   padding: 4px 6px;
-  color: ${colors.primaria};
-  background-color: ${colors.secundaria};
+  color: ${colors.secundaria};
+  background-color: ${colors.primaria};
 
   &:hover {
     background-color: ${colors.btnpointer};
